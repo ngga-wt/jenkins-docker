@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World i made just know'
+                echo 'Hello World test push trigger'
             }
         }
         stage('Hello test') {
