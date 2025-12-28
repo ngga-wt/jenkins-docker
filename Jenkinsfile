@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Hello test') {
             steps {
-                echo 'test push trigger with git'
+                echo 'test github commit trigger'
             }
         }
     }
