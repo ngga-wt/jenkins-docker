@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World test push'
+                echo 'Hello World'
             }
         }
         stage('Hello test') {
             steps {
-                echo 'Hello World from git'
+                echo 'test push trigger with git'
             }
         }
     }
