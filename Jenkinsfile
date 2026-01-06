@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    environment {
+        START_TIME = date
+        buildUser = ''
+      }
     stages {
         stage('First Test') {
             steps {
@@ -8,7 +12,7 @@ pipeline {
         }
         stage('Second Test') {
             steps {
-                echo 'test github commit trigger again'
+                echo 'START_TIME: ${START_TIME} test github commit trigger again'
             }
         }
         stage('Get User') {
@@ -24,7 +28,7 @@ pipeline {
         }
         stage('Last test') {
             steps {
-                echo "test github commit trigger again: ${buildUser}"
+                echo "START_TIME: ${START_TIME} test github commit trigger again: ${buildUser}"
             }
         }
     }
