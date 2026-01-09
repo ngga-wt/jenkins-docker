@@ -12,7 +12,7 @@ pipeline {
                 sleep 5
             }
         }
-        stage('Change Environment') {
+        stage('Change Environment Variable value') {
             steps {
                 script {
 
@@ -42,7 +42,7 @@ pipeline {
 
                     def MINUTES = DIFF_SECS / 60
                     def SECONDS = DIFF_SECS % 60
-                    
+
                     sh """
                         echo "BUILD_NUMBER: $BUILD_NUMBER ,JOB_NAME: $JOB_NAME AND The building user name in differnt stage is running as: ${buildUser}"
                         echo "START_TIME: [$START_TIME], END_TIME: [$END_TIME] Duration: in minutes: $MINUTES ,in seconds: $SECONDS ,HUMAN_READABLE_TIME_DIFFRENCES $DIFF_HUMAN"
